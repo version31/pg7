@@ -9,7 +9,6 @@ Route::get('/columns/{table}/{type]}', 'DevController@getTableColumns');
 Route::any('/keys', 'DevController@getKeys');
 
 
-
 Route::get('/clear-all', function () {
     $exitCode[] = Artisan::call('view:clear');
     $exitCode[] = Artisan::call('cache:clear');
